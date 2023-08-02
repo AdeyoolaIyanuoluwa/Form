@@ -78,11 +78,11 @@ const save = ()=>{
 // const circle = document.getElementById("circle")
 // const bvn = document.getElementById("bvn")
 // const form = document.getElementById("bvn")
-// console.log(bvn);
+// // console.log(bvn);
 // bvn.addEventListener('change', (e)=>{
 //     const target = e.target;
-//     console.log(target);
-//     if(bvn.length===10){
+//     // console.log(target);
+//     if(bvn.length ===10){
 //         circle.src = "../Images/unverified.png"
 //     }else{
 //         circle.src = "../Images/circle check full (2).png" 
@@ -90,14 +90,15 @@ const save = ()=>{
 // })
 
 const input = document.querySelector("input")
-const log = document.getElementById("log")
+const circle = document.querySelector(".circle")
+console.log(circle);
 input.addEventListener("change", updatevalue)
 function updatevalue(e){
-    if(input.length===2){
-        log.textContent = e.target.value
-        // console.log(e.target.value);
-    }else{
-        console.log("error");
-    }
-   
+    // console.log(e.target.value.length);
+    if(e.target.value.length === 10){
+                circle.src = `../Images/circle check full (2).png`
+            }else{
+                circle.src = "../Images/unverified.png"
+            }
+            //  console.log(e.target.value);
 }
